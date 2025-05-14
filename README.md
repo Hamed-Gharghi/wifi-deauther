@@ -1,41 +1,123 @@
-# WiFi Deauther
+# HMD Wifi Killer 🔥
 
-یک ابزار برای انجام حملات deauthentication بر روی شبکه‌های وای‌فای.
+<div align="center">
 
-**هشدار:** استفاده از این ابزار برای حمله به شبکه‌هایی که مجوز ندارید، غیرقانونی و غیراخلاقی است. این ابزار فقط برای اهداف آموزشی و تست امنیت شبکه ارائه می‌شود.
+[English](README.md) | [فارسی](README.fa.md)
 
-## نصب
+![Python](https://img.shields.io/badge/Python-3.x-blue.svg)
+![License](https://img.shields.io/badge/License-MIT-green.svg)
+![Platform](https://img.shields.io/badge/Platform-Linux-red.svg)
+![Status](https://img.shields.io/badge/Status-Active-brightgreen.svg)
 
-1. ابتدا repository را clone کنید:
+</div>
 
-   ```bash
-   git clone https://github.com/YOUR_USERNAME/wifi-deauther.git
-   cd wifi-deauther
-   ```
+## 📝 Description
 
-2. سپس وابستگی‌ها را نصب کنید:
+HMD Wifi Killer is a powerful WiFi deauthentication tool designed for educational and testing purposes. It provides a user-friendly interface for performing deauthentication attacks on WiFi networks using both mdk4 and aircrack-ng methods.
 
-   ```bash
-   pip3 install -r requirements.txt
-   ```
+## ⚠️ Disclaimer
 
-## استفاده
+This tool is provided for educational purposes only. Using this tool against networks without explicit permission is illegal. The author is not responsible for any misuse or damage caused by this program.
 
-1. برنامه را با دسترسی root اجرا کنید:
+## 🚀 Features
 
-   ```bash
-   sudo python3 wifi_deauther.py -i <interface> -t <target_bssid> -g <gateway_bssid> -n <packet_count>
-   ```
+- 🔍 Interactive network scanning
+- 🎯 Multiple attack methods (mdk4 and aircrack-ng)
+- 🖥️ Automatic interface detection
+- 📊 Detailed network information display
+- 🎨 Beautiful colored terminal interface
+- 🔄 Automatic tool installation
+- 🛡️ Root access verification
+- 🎮 User-friendly interactive menu
 
-   *   `-i` یا `--interface`: نام کارت شبکه بی‌سیم خود را مشخص کنید.
-   *   `-t` یا `--target`: آدرس MAC شبکه وای‌فای مورد نظر را مشخص کنید.
-   *   `-g` یا `--gateway`: آدرس MAC روتر را مشخص کنید (اختیاری).
-   *   `-n` یا `--count`: تعداد بسته‌های deauthentication که می‌خواهید ارسال کنید را مشخص کنید (اختیاری).
+## 📋 Requirements
 
-## مجوز
+- Python 3.x
+- Linux operating system
+- Root access
+- Wireless network interface with monitor mode support
 
-این پروژه تحت مجوز MIT منتشر شده است.
+### Required Tools
+- aircrack-ng suite
+- mdk4
+- scapy
+- termcolor
 
-## مشارکت
+## 🛠️ Installation
 
-برای مشارکت در این پروژه، می‌توانید از طریق pull request اقدام کنید. 
+1. Clone the repository:
+```bash
+git clone https://github.com/Hamed-Gharghi/wifi-deauther.git
+cd wifi-deauther
+```
+
+2. Make the script executable:
+```bash
+chmod +x wifi_deauther.py
+```
+
+3. Run the script with root privileges:
+```bash
+sudo python3 wifi_deauther.py
+```
+
+## 💻 Usage
+
+1. Run the script with sudo:
+```bash
+sudo python3 wifi_deauther.py
+```
+
+2. Select your wireless interface from the list
+
+3. Choose your attack method:
+   - mdk4 (More aggressive)
+   - aircrack-ng (More stable)
+
+4. Select target network or choose to attack all networks
+
+5. Press Ctrl+C to stop the attack
+
+## 🎯 Attack Methods
+
+### mdk4 Method
+- More aggressive attack
+- Can target specific clients
+- Higher packet rate
+
+### aircrack-ng Method
+- More stable attack
+- Better compatibility
+- Lower resource usage
+
+## 🔧 Command Line Arguments
+
+```bash
+-i, --interface    Specify wireless interface
+-t, --target      Target WiFi MAC address
+-g, --gateway     Gateway MAC address (Optional)
+-n, --count       Number of deauthentication packets (default: 1000)
+```
+
+## 📝 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 👨‍💻 Author
+
+- **Hamed Gharghi**
+- GitHub: [@Hamed-Gharghi](https://github.com/Hamed-Gharghi)
+
+## ⭐ Support
+
+If you find this tool helpful, please give it a star on GitHub!
+
+## 📞 Contact
+
+For any questions or suggestions, please open an issue on GitHub.
+
+---
+
+<div align="center">
+Made with ❤️ by Hamed Gharghi
+</div> 
