@@ -1,289 +1,257 @@
 <div align="center">
-  <img src="cover.png" alt="Network File Sharing App — Share files over WiFi" width="100%">
-  <br/>
-  <h1>📁 Network File Sharing App</h1>
-  <h3><em>Share files over WiFi in seconds — no cloud, no account, no cables</em></h3>
-  <br/>
-  <p align="center">
-    <a href="#-features"><strong>✨ Features</strong></a> ·
-    <a href="#-download-pre-built-exe"><strong>📥 Download</strong></a> ·
-    <a href="#-screenshots"><strong>📸 Screenshots</strong></a> ·
-    <a href="#-quick-start"><strong>🏁 Quick Start</strong></a> ·
-    <a href="#-how-to-use"><strong>🎮 How To Use</strong></a> ·
-    <a href="#-security"><strong>🛡️ Security</strong></a> ·
-    <a href="#-changelog"><strong>📋 Changelog</strong></a>
-  </p>
-  <br/>
 
-  [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-  [![Version](https://img.shields.io/badge/Version-2.1.0-success.svg)](https://github.com/Hamed-Gharghi/Network-File-Sharing-App-with-Python/releases)
-  [![Python](https://img.shields.io/badge/Python-3.8%2B-3776AB?logo=python&logoColor=white)](https://python.org)
-  [![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20macOS%20%7C%20Linux-lightgrey)](https://github.com/Hamed-Gharghi/Network-File-Sharing-App-with-Python)
-  [![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-brightgreen)](https://github.com/Hamed-Gharghi/Network-File-Sharing-App-with-Python/pulls)
-  [![Made with ❤️](https://img.shields.io/badge/Made_with-❤️-red)]()
+<img src="image.png" alt="HMD Wifi Killer — Educational WiFi Deauthentication Toolkit" width="100%">
 
-  <br/>
+<h1>HMD Wifi Killer — Educational WiFi Deauthentication Toolkit</h1>
 
-  **Network File Sharing App** is a free, open-source **LAN file sharing** tool for Windows, macOS, and Linux. Start a local HTTP server from a simple GUI, share folders over WiFi, and let others download or upload files from any browser — with optional password protection and QR code access.
+[English](#english) · [فارسی](#فارسی)
 
-  <br/>
+![Python](https://img.shields.io/badge/Python-3.x-3776AB?style=flat-square&logo=python&logoColor=white)
+![Platform](https://img.shields.io/badge/Platform-Linux-FCC624?style=flat-square&logo=linux&logoColor=black)
+![License](https://img.shields.io/badge/License-MIT-22C55E?style=flat-square)
+![Status](https://img.shields.io/badge/Status-Active-0EA5E9?style=flat-square)
+
+**Python • Linux • aircrack-ng • mdk4**
+
 </div>
 
 ---
 
-## 🚀 Why This App?
+## English
 
-`Network File Sharing App` helps you share files on your local network quickly and safely.
+### Overview
 
-It's perfect when you want to:
-- 📦 Send large files fast over WiFi
-- 💻 Share between laptop, desktop, and phone
-- 🧳 Use a portable `.exe` without installing Python
+**HMD Wifi Killer** is an interactive CLI toolkit for studying and testing WiFi deauthentication behavior in controlled environments. It discovers wireless interfaces, scans nearby networks, and can run deauth flows through **mdk4** or **aircrack-ng**.
 
----
+> **Legal notice:** Use this software only on networks you own or have explicit written authorization to test. Unauthorized use is illegal. The author assumes no liability for misuse.
 
-## ✨ Features
+### Features
 
-- 🚀 **One-click sharing** from a simple desktop GUI
-- 📂 **Multi-folder support** (share many folders at once)
-- 📱 **QR code access** for instant mobile connection
-- 🔒 **Password protection** with HTTP Basic Auth
-- 📤 **File uploads** from browser clients (two-way sharing)
-- ⚡ **Live transfer speed** on the host app (progress + MB/s while transferring)
-- 📋 **Per-device activity log** on the web UI (each IP sees only its own transfers)
-- 🔄 **Auto-refresh file list** in the desktop app when files are added, removed, or uploaded
-- 🌙 **Dark/Light mode** with fully themed interface
-- 🔍 **File search** with quick filtering
-- 🖱️ **Drag and drop** folder support in the GUI
-- 🌐 **Web interface** works in any modern browser
-- 🔌 **Custom port** and smart retry when busy
-- 🎨 **Custom executable icon** when building
-- 🌍 **Cross-platform source support** (Windows/macOS/Linux)
+| Feature | Description |
+|---|---|
+| Interactive scanning | Discover nearby access points with channel and BSSID details |
+| Dual attack backends | Choose **mdk4** (aggressive) or **aircrack-ng** (stable) |
+| Interface detection | Automatically lists IEEE 802.11 wireless adapters |
+| Monitor mode setup | Enables monitor mode on the selected interface |
+| Dependency checks | Verifies root access and required system tools |
+| Colored CLI | Clear terminal feedback for scan and attack status |
 
----
+### Requirements
 
-## 📥 Download (Pre-built EXE)
+- **OS:** Linux
+- **Runtime:** Python 3.x
+- **Privileges:** Root (`sudo`)
+- **Hardware:** Wireless adapter with monitor-mode support
 
-Don't want to install Python? Download the ready-to-run executable from Releases:
-
-👉 [Download `FileSharingApp.exe`](https://github.com/Hamed-Gharghi/Network-File-Sharing-App-with-Python/releases/latest)
-
-- ✅ No installation needed
-- ✅ No Python required
-- ✅ No console window (GUI only)
-- ✅ Portable and easy to carry
-
----
-
-## 📸 Screenshots
-
-### Desktop App (Main Window)
-
-![Desktop App Main Window](screenshots/app-main-window.png)
-
-### Web Interface (Shared Folders Home)
-
-![Web Interface Shared Folders Home](screenshots/web-homepage.png)
-
-### Web Interface (Folder Content + Upload)
-
-![Web Interface Folder Content and Upload](screenshots/web-folder-view.png)
-
----
-
-## 🏁 Quick Start
-
-### Option A: Use the EXE (Windows)
-
-1. Download `FileSharingApp.exe` from Releases
-2. Open the app
-3. Add one or more folders
-4. Click **Start Server**
-5. Share URL or QR code with devices on the same network
-
-### Option B: Run from source (Python)
-
-Requirements:
-- Python `3.8+`
+#### System packages
 
 ```bash
-git clone https://github.com/Hamed-Gharghi/Network-File-Sharing-App-with-Python.git
-cd Network-File-Sharing-App-with-Python
-
-# Optional but recommended extras
-pip install -r requirements.txt
-
-python file_sharing_network_gui.py
+sudo apt update
+sudo apt install aircrack-ng mdk4
 ```
 
-> **Note:** The core app runs with Python’s standard library alone. Packages in `requirements.txt` unlock QR codes, drag & drop, and EXE builds.
+#### Python packages
 
----
+```bash
+pip install -r requirements.txt
+```
 
-## 🎮 How To Use
+Core libraries used by the tool: `scapy`, `termcolor`.
 
-### Basic Flow
+### Installation
 
-1. Connect all devices to the same WiFi/LAN
-2. Add folders using `+ Add Folder` or drag-and-drop
-3. Configure port, password, and upload option
-4. Start the server
-5. Share the link shown in the app
+```bash
+git clone https://github.com/Hamed-Gharghi/wifi-deauther.git
+cd wifi-deauther
+chmod +x wifi_deauther.py
+```
 
-### For Recipients
+### Usage
 
-Recipients open the link in a browser and can:
-- Browse folders
-- Download files
-- Navigate subfolders
-- Upload files (if enabled)
-- See **Your Recent Activity** (downloads/uploads from that device only)
+Launch the interactive menu:
 
-### Host tips (desktop app)
+```bash
+sudo python3 wifi_deauther.py
+```
 
-- Watch **live transfer speed** above the Activity Log during uploads/downloads
-- The file list **auto-updates** when someone uploads or when files change on disk
-- Use Dark/Light mode with the moon/sun button or `Ctrl+D`
+Typical flow:
 
----
+1. Select a wireless interface
+2. Choose an attack backend (`mdk4` or `aircrack-ng`)
+3. Pick a target network (or all networks)
+4. Stop with `Ctrl+C`
 
-## 🖥️ Web Interface
+#### Command-line options
 
-Routes:
+```text
+-i, --interface   Wireless interface name
+-t, --target      Target WiFi BSSID (MAC address)
+-g, --gateway     Gateway MAC address (optional)
+-n, --count       Number of deauthentication packets (default: 1000)
+```
 
-| Route | Description |
-|---|---|
-| `/` | Home page with all shared folders |
-| `/0/`, `/1/`, ... | Folder-specific file view |
+Example:
 
-Each folder page includes:
-- File list with names, sizes, and modified dates
-- Breadcrumb navigation
-- Drag-and-drop upload area (when enabled)
-- Per-device **Recent Activity** panel (this connection only)
-- Responsive layout for desktop and mobile
+```bash
+sudo python3 wifi_deauther.py -i wlan0 -t AA:BB:CC:DD:EE:FF -n 2000
+```
 
----
+### Attack methods
 
-## ⌨️ Keyboard Shortcuts
-
-| Shortcut | Action |
-|---|---|
-| `Ctrl+B` | Add/Browse folder |
-| `Ctrl+S` | Start server |
-| `Ctrl+Shift+S` | Stop server |
-| `Ctrl+Q` | Quit app |
-| `Ctrl+D` | Toggle dark/light mode |
-| `Ctrl+L` | Copy link / open in browser |
-
----
-
-## 📦 Dependencies
-
-| Package | Required? | Purpose |
+| Method | Strengths | Best for |
 |---|---|---|
-| *(Python stdlib)* | ✅ Yes | Core GUI + HTTP server |
-| `qrcode[pil]` | Optional | QR code generation |
-| `tkinterdnd2` | Optional | Drag & drop folders onto the GUI |
-| `Pillow` | Optional | PNG→ICO icon conversion for builds |
-| `pyinstaller` | Optional | Build standalone `FileSharingApp.exe` |
+| **mdk4** | Higher packet rate; can focus on clients | Aggressive lab testing |
+| **aircrack-ng** | More stable; lower resource use | Broader adapter compatibility |
 
-Install everything:
+### Project structure
 
-```bash
-pip install -r requirements.txt
+```text
+wifi-deauther/
+├── wifi_deauther.py   # Main CLI application
+├── requirements.txt   # Python dependencies
+├── LICENSE            # MIT License
+├── image.png          # Project banner
+└── README.md          # Documentation (EN / FA)
 ```
 
----
+### Disclaimer
 
-## 📦 Build Standalone Executable
+This project is intended strictly for education, research, and authorized security testing. Running deauthentication attacks without permission may violate local laws and network policies. Always obtain consent before testing.
 
-```bash
-pip install -r requirements.txt
-python build.py
-```
+### License
 
-- Output: `dist/FileSharingApp.exe`
-- GUI-only executable (`--windowed`, no console)
+Released under the [MIT License](LICENSE).
 
-### 🎨 Custom Icon
-
-Place an icon in the `icon/` directory:
-- `icon/icon.ico` (preferred)
-- `icon/icon.png` (auto-converted if Pillow is installed)
-
----
-
-## 🛡️ Security
-
-Built-in safeguards include:
-- Path traversal protection
-- Uploaded filename sanitization
-- HTML escaping for displayed file names
-- Optional HTTP Basic Auth password protection
-- Upload enable/disable control
-- Upload size limit (500 MB max per request)
-
-> Use on trusted local networks. Password protection helps, but this is not a full internet-facing security suite.
-
----
-
-## 🧰 Tech Stack
-
-- **Language:** Python 3.8+
-- **GUI:** Tkinter
-- **Server:** `ThreadingHTTPServer` (Python stdlib)
-- **Optional libs:** `qrcode`, `Pillow`, `tkinterdnd2`
-- **Packaging:** PyInstaller
-
----
-
-## 📋 Changelog
-
-### v2.1.0
-
-**New**
-- 📋 Per-device **Recent Activity** on the web UI (each client IP sees only its own downloads/uploads)
-- ⚡ **Live transfer speed** on the host desktop app (progress %, size, and MB/s while transferring)
-- 🔄 **Auto-refresh** of the desktop file list when files are uploaded or change on disk
-- Live sync of shared folders with the running server when folders are added/removed
-
-**Docs / packaging**
-- Updated `README.md` and `requirements.txt` for v2.1.0
-- Clearer dependency and build instructions
-
-### v2.0.0
-
-- Multi-folder sharing with virtual homepage
-- QR code access, password protection, web uploads
-- Dark/Light mode, keyboard shortcuts, scrollable window
-- Improved build pipeline and custom icon support
-- Fixes for server stop behavior, theming, and resize clipping
-
----
-
-## 🤝 Contributing
-
-Contributions are welcome and appreciated.
-
-```bash
-git checkout -b feature/your-feature
-git commit -m "Add: your feature"
-git push origin feature/your-feature
-```
-
-Then open a pull request describing your changes and test results.
-
----
-
-## License
-
-Distributed under the MIT License. See `LICENSE` for details.
-
----
-
-## Contact
+### Author
 
 **Hamed Gharghi**  
-[Email](mailto:Hamedgharghi1@gmail.com)  
-[GitHub](https://github.com/Hamed-Gharghi)
+GitHub: [@Hamed-Gharghi](https://github.com/Hamed-Gharghi)
+
+If this project helps your learning or lab work, consider starring the repository.
+
+---
+
+<div dir="rtl">
+
+## فارسی
+
+### معرفی
+
+**HMD Wifi Killer** یک ابزار خط فرمان تعاملی برای مطالعه و تست رفتار deauthentication در شبکه‌های وای‌فای در محیط‌های کنترل‌شده است. این ابزار رابط‌های بی‌سیم را شناسایی می‌کند، شبکه‌های اطراف را اسکن می‌کند و امکان اجرای حمله از طریق **mdk4** یا **aircrack-ng** را فراهم می‌کند.
+
+> **هشدار قانونی:** این نرم‌افزار را فقط روی شبکه‌هایی استفاده کنید که مالک آن هستید یا مجوز کتبی صریح برای تست دارید. استفاده غیرمجاز غیرقانونی است. نویسنده هیچ مسئولیتی در قبال سوءاستفاده نمی‌پذیرد.
+
+### قابلیت‌ها
+
+| قابلیت | توضیحات |
+|---|---|
+| اسکن تعاملی | کشف نقاط دسترسی اطراف همراه با کانال و BSSID |
+| دو موتور حمله | انتخاب **mdk4** (تهاجمی) یا **aircrack-ng** (پایدار) |
+| تشخیص رابط شبکه | فهرست خودکار آداپتورهای بی‌سیم IEEE 802.11 |
+| فعال‌سازی حالت مانیتور | تنظیم monitor mode روی رابط انتخاب‌شده |
+| بررسی وابستگی‌ها | تأیید دسترسی root و ابزارهای سیستمی مورد نیاز |
+| رابط رنگی | بازخورد واضح وضعیت اسکن و حمله در ترمینال |
+
+### نیازمندی‌ها
+
+- **سیستم‌عامل:** لینوکس
+- **زمان اجرا:** Python 3.x
+- **دسترسی:** Root (`sudo`)
+- **سخت‌افزار:** کارت شبکه بی‌سیم با پشتیبانی از حالت مانیتور
+
+#### بسته‌های سیستمی
+
+```bash
+sudo apt update
+sudo apt install aircrack-ng mdk4
+```
+
+#### بسته‌های پایتون
+
+```bash
+pip install -r requirements.txt
+```
+
+کتابخانه‌های اصلی: `scapy` و `termcolor`.
+
+### نصب
+
+```bash
+git clone https://github.com/Hamed-Gharghi/wifi-deauther.git
+cd wifi-deauther
+chmod +x wifi_deauther.py
+```
+
+### نحوه استفاده
+
+اجرای منوی تعاملی:
+
+```bash
+sudo python3 wifi_deauther.py
+```
+
+مراحل معمول:
+
+1. انتخاب رابط شبکه بی‌سیم
+2. انتخاب موتور حمله (`mdk4` یا `aircrack-ng`)
+3. انتخاب شبکه هدف (یا همه شبکه‌ها)
+4. توقف با `Ctrl+C`
+
+#### گزینه‌های خط فرمان
+
+```text
+-i, --interface   نام رابط شبکه بی‌سیم
+-t, --target      آدرس MAC (BSSID) شبکه هدف
+-g, --gateway     آدرس MAC گیت‌وی (اختیاری)
+-n, --count       تعداد بسته‌های deauthentication (پیش‌فرض: 1000)
+```
+
+مثال:
+
+```bash
+sudo python3 wifi_deauther.py -i wlan0 -t AA:BB:CC:DD:EE:FF -n 2000
+```
+
+### روش‌های حمله
+
+| روش | نقاط قوت | مناسب برای |
+|---|---|---|
+| **mdk4** | نرخ بسته بالاتر؛ امکان تمرکز روی کلاینت‌ها | تست آزمایشگاهی تهاجمی |
+| **aircrack-ng** | پایدارتر؛ مصرف منابع کمتر | سازگاری گسترده‌تر با آداپتورها |
+
+### ساختار پروژه
+
+```text
+wifi-deauther/
+├── wifi_deauther.py   # برنامه اصلی CLI
+├── requirements.txt   # وابستگی‌های پایتون
+├── LICENSE            # مجوز MIT
+├── image.png          # بنر پروژه
+└── README.md          # مستندات (انگلیسی / فارسی)
+```
+
+### سلب مسئولیت
+
+این پروژه صرفاً برای آموزش، پژوهش و تست امنیتی مجاز طراحی شده است. اجرای حملات deauthentication بدون مجوز ممکن است خلاف قوانین محلی و سیاست‌های شبکه باشد. همیشه قبل از تست رضایت بگیرید.
+
+### مجوز
+
+تحت [مجوز MIT](LICENSE) منتشر شده است.
+
+### نویسنده
+
+**حامد غرقی**  
+GitHub: [@Hamed-Gharghi](https://github.com/Hamed-Gharghi)
+
+اگر این پروژه به یادگیری یا کار آزمایشگاهی شما کمک کرد، به مخزن ستاره بدهید.
+
+</div>
+
+---
+
+<div align="center">
+
+Made by [Hamed Gharghi](https://github.com/Hamed-Gharghi) · ساخته شده توسط [حامد غرقی](https://github.com/Hamed-Gharghi)
+
+</div>
+****
